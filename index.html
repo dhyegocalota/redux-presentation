@@ -190,9 +190,9 @@
 							function counter(state = 0, action) {
 								switch (action.type) {
 								case 'INCREMENT':
-									return state + action.amount;
+									return state + 1;
 								case 'DECREMENT':
-									return state - action.amount;
+									return state - 1;
 								default:
 									return state;
 								}
@@ -214,12 +214,12 @@
 							);
 
 							// Send some actions
-							store.dispatch({ type: 'INCREMENT', amount: 1 });
+							store.dispatch({ type: 'INCREMENT' });
 							// 1
-							store.dispatch({ type: 'INCREMENT', amount: 3 });
-							// 4
-							store.dispatch({ type: 'DECREMENT', amount: 2 });
+							store.dispatch({ type: 'INCREMENT' });
 							// 2
+							store.dispatch({ type: 'DECREMENT' });
+							// 1
 							```
 
             </script>
